@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto - UpNow</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">UpNow</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="culture.html">Cultura</a></li>
+        <li><a href="team.html">Equipo</a></li>
+        <li><a href="careers.html">Carreras</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="services.html">Servicios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="testimonials.html">Testimonios</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact">
+      <h1>Contacto</h1>
+      <form id="contactForm" action="#" method="POST">
+        <label for="name">Nombre:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+        <label for="message">Mensaje:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br />
+        <button type="submit">Enviar Consulta</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 UpNow. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Gracias por tu consulta, te contactaremos pronto.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
