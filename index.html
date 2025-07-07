@@ -4,34 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UpNow - Innovación Digital</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-  <script>
-  function toggleMenu() {
-    document.querySelector('.sidebar').classList.toggle('open');
-  }
-  document.querySelectorAll('.sidebar a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelector('.sidebar').classList.remove('open');
-    });
-  });
-</script>
-
-  <body>
-  <header class="header">
-  <div class="logo">UpNow</div>
-  <nav class="nav" id="nav">
-  
-  </nav>
-</header>
-
-    
-    <button class="toggle-button" onclick="toggleMenu()">☰</button>
-
-
-
-
+<body>
+  <header>
+    <div class="logo">UpNow</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="culture.html">Cultura</a></li>
+        <li><a href="team.html">Equipo</a></li>
+        <li><a href="careers.html">Carreras</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="services.html">Servicios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="testimonials.html">Testimonios</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <!-- HERO -->
