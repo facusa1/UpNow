@@ -7,7 +7,7 @@ body {
   animation: gradientBG 20s ease infinite;
 }
 
-/* Spotlight oscuro que sigue al mouse */
+/* Spotlight que genera sombra circular bajo el cursor */
 #spotlight {
   position: fixed;
   top: 0;
@@ -18,8 +18,8 @@ body {
   z-index: 2;
   background: radial-gradient(
     circle at var(--x, 50%) var(--y, 50%),
-    transparent 100px,
-    rgba(0, 0, 0, 0.5) 300px
+    rgba(0, 0, 0, 0.4) 0px,
+    transparent 200px
   );
   transition: background 0.1s ease;
 }
@@ -42,6 +42,8 @@ header {
   padding: 20px 50px;
   background: rgba(0, 0, 0, 0.2);
   flex-wrap: wrap;
+  z-index: 3;
+  position: relative;
 }
 
 .logo {
@@ -77,6 +79,8 @@ nav ul li a:hover {
   min-height: 90vh;
   text-align: center;
   padding: 60px 20px 40px;
+  position: relative;
+  z-index: 3;
 }
 
 .hero h1 {
@@ -100,6 +104,8 @@ nav ul li a:hover {
   font-weight: 700;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 3;
 }
 
 .btn:hover {
@@ -114,6 +120,8 @@ nav ul li a:hover {
   gap: 50px;
   padding: 80px 30px;
   background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
 }
 
 .feature {
@@ -134,12 +142,16 @@ footer {
   text-align: center;
   padding: 40px;
   background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
 }
 
 .blog {
   padding: 100px 30px;
   background: rgba(0, 0, 0, 0.2);
   text-align: center;
+  position: relative;
+  z-index: 3;
 }
 
 .blog h1 {
@@ -170,6 +182,8 @@ footer {
   padding: 100px 30px;
   text-align: center;
   background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
 }
 
 .extra-section h2 {
@@ -187,6 +201,8 @@ footer {
   text-align: center;
   padding: 100px 30px;
   background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
 }
 
 /* Animación de fondo */
@@ -196,7 +212,7 @@ footer {
   100% { background-position: 0% 50%; }
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
