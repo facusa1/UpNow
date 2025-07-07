@@ -1,84 +1,78 @@
 /* Tipografía moderna */
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  background: linear-gradient(270deg, #1d4ed8, #3b82f6, #10b981);
-  background-size: 600% 600%;
-  animation: gradientBG 20s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #001f3f;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 240px; height: 100%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding-top: 2rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  border-radius: 0 20px 20px 0;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  transition: all 0.3s ease;
-}
-
-/* Menú */
-.nav {
-  transition: max-height 0.4s ease;
-}
-
-.nav ul {
-  display: flex;
+/* Menú interno */
+.sidebar nav ul {
   list-style: none;
-  gap: 2rem;
+  padding: 0; margin: 0;
 }
-
-.nav a {
-  color: white;
+.sidebar nav ul li { margin: 1rem 0; }
+.sidebar nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  border-radius: 30px 0 0 30px;
+  transition: background 0.3s;
+}
+.sidebar nav ul li a:hover {
+  background: rgba(0,180,255,0.4);
+}
+.icon {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+.label {
+  font-size: 1rem;
 }
 
+/* Botón hamburguesa móvil */
+.toggle-button {
+  display: none;
+}
+
+/* Vista móvil */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
+  .sidebar {
+    transform: translateX(-100%);
   }
-
-  .nav {
-    overflow: hidden;
-    max-height: 0;
-    width: 100%;
+  .sidebar.open {
+    transform: translateX(0);
   }
-
-  .nav.open {
-    max-height: 300px;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    background: #001f3f;
-    padding: 1rem;
+  .toggle-button {
+    display: block;
+    position: fixed;
+    top: 1rem; left: 1rem;
+    z-index: 1100;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
   }
 }
+
 
 
 .hero {
