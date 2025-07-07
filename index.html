@@ -8,6 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Spotlight -->
+  <div id="spotlight"></div>
+
   <header>
     <div class="logo">UpNow</div>
     <nav>
@@ -94,7 +97,7 @@
     <p>© 2025 UpNow. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- JavaScript: Reveal + Counter -->
+  <!-- JavaScript: Reveal + Counter + Spotlight -->
   <script>
     // Scroll Reveal
     const reveals = document.querySelectorAll(".reveal");
@@ -146,6 +149,14 @@
         animateCounter();
         started = true;
       }
+    });
+
+    // Spotlight que sigue al mouse
+    const spotlight = document.getElementById("spotlight");
+
+    document.addEventListener("mousemove", (e) => {
+      spotlight.style.setProperty("--x", `${e.clientX}px`);
+      spotlight.style.setProperty("--y", `${e.clientY}px`);
     });
   </script>
 </body>
