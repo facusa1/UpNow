@@ -162,7 +162,7 @@ footer {
 }
 
 /* Responsive: centrado en mobile si querés asegurarlo extra */
-@media (max-width: 768px) {
+@media (max-width: 90%) {
   .hero {
     text-align: center;
     display: flex;
