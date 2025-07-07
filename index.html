@@ -145,10 +145,11 @@
       if (statsTop < window.innerHeight - 100 && !started) {
         animateCounter();
         started = true;
-      }
+      });
 </script>
+ 
   <script>
-      // Spotlight mouse effect
+    
 const spotlight = document.getElementById("spotlight");
 document.addEventListener("mousemove", (e) => {
   spotlight.style.setProperty("--x", `${e.clientX}px`);
