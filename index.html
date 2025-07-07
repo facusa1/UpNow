@@ -28,14 +28,12 @@
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero reveal">
       <h1>Impulsamos tu Transformación Digital</h1>
       <p>En UpNow combinamos creatividad, tecnología y estrategia para llevar tu negocio al siguiente nivel.</p>
       <a href="contact.html" class="btn">Hablemos</a>
     </section>
 
-    <!-- FEATURES -->
     <section class="features reveal">
       <div class="feature">
         <h2>Desarrollo Web</h2>
@@ -54,7 +52,6 @@
       </div>
     </section>
 
-    <!-- BLOG -->
     <section class="blog reveal">
       <h1>Últimas Noticias y Artículos</h1>
       <article>
@@ -72,7 +69,6 @@
       <a href="blog.html" class="btn">Leer Más Artículos</a>
     </section>
 
-    <!-- EXTRAS -->
     <section class="extra-section reveal">
       <h2>Testimonios</h2>
       <p>Escucha a nuestros clientes satisfechos y descubre cómo UpNow transformó sus negocios.</p>
@@ -85,7 +81,6 @@
       <a href="careers.html" class="btn">Ver Vacantes</a>
     </section>
 
-    <!-- CONTADOR -->
     <section class="stats reveal">
       <h2 style="color: white; font-size: 2.5rem;">
         +<span id="clientes">0</span> clientes confiaron en nosotros
@@ -97,9 +92,7 @@
     <p>© 2025 UpNow. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- JavaScript: Reveal + Counter + Spotlight -->
   <script>
-    // Scroll Reveal
     const reveals = document.querySelectorAll(".reveal");
 
     function handleScrollReveal() {
@@ -119,7 +112,6 @@
     window.addEventListener("scroll", handleScrollReveal);
     window.addEventListener("load", handleScrollReveal);
 
-    // Contador de clientes
     let started = false;
     function animateCounter() {
       const counter = document.getElementById("clientes");
@@ -151,9 +143,8 @@
       }
     });
 
-    // Spotlight oscuro (sombra) que sigue al mouse
+    // Spotlight INVERSO: sombra sigue al cursor (oscurece área bajo el mouse)
     const spotlight = document.getElementById("spotlight");
-
     document.addEventListener("mousemove", (e) => {
       spotlight.style.setProperty("--x", `${e.clientX}px`);
       spotlight.style.setProperty("--y", `${e.clientY}px`);
