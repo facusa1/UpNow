@@ -216,3 +216,61 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin-top: 15px;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .blog h1 {
+    font-size: 2rem;
+  }
+
+  .blog article {
+    padding: 20px;
+  }
+
+  .extra-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .extra-section p {
+    font-size: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+}
