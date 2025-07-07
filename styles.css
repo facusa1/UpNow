@@ -162,8 +162,8 @@ footer {
 }
 
 /* Responsive: centrado en mobile si querés asegurarlo extra */
-@media (max-width: 90%) {
-  .hero {
+@media (max-width: 768px) {
+  .tarjetas {
     text-align: center;
     display: flex;
     flex-direction: column;
