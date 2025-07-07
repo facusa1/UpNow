@@ -1,86 +1,51 @@
 /* Tipografía moderna */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background: linear-gradient(270deg, #1d4ed8, #3b82f6, #10b981);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
 }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0; left: 0;
-  width: 240px; height: 100%;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  padding-top: 2rem;
-  transform: translateX(0);
-  transition: transform 0.3s ease;
-  z-index: 1000;
-  border-radius: 0 20px 20px 0;
-}
-
-/* Menú interno */
-.sidebar nav ul {
-  list-style: none;
-  padding: 0; margin: 0;
-}
-.sidebar nav ul li { margin: 1rem 0; }
-.sidebar nav ul li a {
+header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1.5rem;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
   color: #fff;
   text-decoration: none;
-  border-radius: 30px 0 0 30px;
-  transition: background 0.3s;
-}
-.sidebar nav ul li a:hover {
-  background: rgba(0,180,255,0.4);
-}
-.icon {
-  font-size: 1.4rem;
-  margin-right: 1rem;
-}
-.label {
-  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-/* Botón hamburguesa móvil */
-.toggle-button {
-  display: none;
+nav ul li a:hover {
+  color: #10b981;
 }
-
-/* Vista móvil */
-@media (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-  }
-  .sidebar.open {
-    transform: translateX(0);
-  }
-  .toggle-button {
-    display: block;
-    position: fixed;
-    top: 1rem; left: 1rem;
-    z-index: 1100;
-    background: rgba(255,255,255,0.2);
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 8px;
-    backdrop-filter: blur(4px);
-    cursor: pointer;
-  }
-}
-
-
 
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Cambié de 200vh a 100vh para menos espacio */
+  height: 200vh; /* 2 pantallas */
   text-align: center;
   padding: 0 20px;
 }
@@ -118,7 +83,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  padding: 40px 30px; /* Reducí de 80px a 40px arriba/abajo */
+  padding: 80px 30px;
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -194,15 +159,4 @@ footer {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-/* Responsive: centrado en mobile si querés asegurarlo extra */
-@media (max-width: 768px) {
-  .tarjetas {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
 }
