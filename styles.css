@@ -7,22 +7,6 @@ body {
   animation: gradientBG 20s ease infinite;
 }
 
-/* Spotlight oscuro que sigue al mouse */
-#spotlight {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 2;
-  background: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
-    transparent 100px,
-    rgba(0, 0, 0, 0.5) 100px
-  );
-  transition: background 0.1s ease;
-}
 
 /* Animación reveal */
 .reveal {
