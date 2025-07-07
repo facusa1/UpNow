@@ -8,29 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
   <script>
-  const hamburger = document.getElementById('hamburger');
-  const nav = document.getElementById('nav');
-
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('open');
+  function toggleMenu() {
+    document.querySelector('.sidebar').classList.toggle('open');
+  }
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.sidebar').classList.remove('open');
+    });
   });
 </script>
 
   <body>
-  <header class="header">
-  <div class="logo">UpNow</div>
-  <button class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="nav" id="nav">
+  <button class="toggle-button" onclick="toggleMenu()">☰</button>
+
+<aside class="sidebar">
+  <nav>
     <ul>
-      <li><a href="servicios">Servicios</a></li>
-      <li><a href="nosotros">Nosotros</a></li>
-      <li><a href="equipo">Equipo</a></li>
-      <li><a href="contacto">Contacto</a></li>
+      <li><a href="servicios.html"><span class="icon">🛠️</span><span class="label">Servicios</span></a></li>
+      <li><a href="nosotros.html"><span class="icon">👤</span><span class="label">Nosotros</span></a></li>
+      <li><a href="equipo.html"><span class="icon">👥</span><span class="label">Equipo</span></a></li>
+      <li><a href="contacto.html"><span class="icon">✉️</span><span class="label">Contacto</span></a></li>
     </ul>
   </nav>
-</header>
+</aside>
+
 
 
   <main>
