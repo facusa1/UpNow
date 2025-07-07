@@ -18,9 +18,8 @@ header {
   background: rgba(0, 0, 0, 0.2);
   flex-wrap: wrap;
   
-}
 
-.logo {
+logo {
   font-weight: 800;
   font-size: 1.8rem;
 }
