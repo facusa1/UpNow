@@ -45,7 +45,7 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200vh; /* 2 pantallas */
+  height: 100vh; /* Cambié de 200vh a 100vh para menos espacio */
   text-align: center;
   padding: 0 20px;
 }
@@ -83,7 +83,7 @@ nav ul li a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  padding: 80px 30px;
+  padding: 40px 30px; /* Reducí de 80px a 40px arriba/abajo */
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -159,4 +159,15 @@ footer {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* Responsive: centrado en mobile si querés asegurarlo extra */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
