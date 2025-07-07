@@ -7,7 +7,65 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  function handleScrollReveal() {
+    reveals.forEach((el) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 150;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", handleScrollReveal);
+  window.addEventListener("load", handleScrollReveal);
+</script>
+
+  <script>
+  // Scroll reveal ya está arriba
+
+  // Contador animado
+  let started = false;
+  function animateCounter() {
+    const counter = document.getElementById("clientes");
+    const target = 1287; // Número inventado
+    let count = 0;
+    const speed = 10;
+
+    const updateCount = () => {
+      const increment = Math.ceil(target / 100);
+
+      if (count < target) {
+        count += increment;
+        counter.innerText = count;
+        setTimeout(updateCount, speed);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  }
+
+  window.addEventListener("scroll", () => {
+    const statsSection = document.querySelector(".stats");
+    const statsTop = statsSection.getBoundingClientRect().top;
+
+    if (statsTop < window.innerHeight - 100 && !started) {
+      animateCounter();
+      started = true;
+    }
+  });
+</script>
+
+  <body>
   <header>
     <div class="logo">UpNow</div>
     <nav>
@@ -28,7 +86,7 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero">
+    <section class="features reveal">
       <h1>Impulsamos tu Transformación Digital</h1>
       <p>En UpNow combinamos creatividad, tecnología y estrategia para llevar tu negocio al siguiente nivel.</p>
       <a href="contact.html" class="btn">Hablemos</a>
