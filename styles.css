@@ -13,11 +13,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #000428, #004e92);
+  background: #001f3f;
   color: white;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .logo {
@@ -25,70 +25,61 @@ body {
   font-weight: bold;
 }
 
-.menu-toggle {
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
   background: none;
   border: none;
-  color: white;
-  font-size: 2rem;
-  display: none;
   cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* Menú */
+.nav {
+  transition: max-height 0.4s ease;
 }
 
 .nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
 }
 
 .nav a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: 500;
 }
 
-.nav a:hover {
-  color: #00ffff;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  .hamburger {
+    display: flex;
   }
 
   .nav {
-    display: none;
+    overflow: hidden;
+    max-height: 0;
     width: 100%;
   }
 
-  .nav.active {
-    display: block;
-    background-color: #001f3f;
-    animation: slideDown 0.3s ease-in-out;
+  .nav.open {
+    max-height: 300px;
   }
 
   .nav ul {
     flex-direction: column;
+    background: #001f3f;
     padding: 1rem;
   }
-
-  .nav li {
-    margin: 0.5rem 0;
-  }
-
-  @keyframes slideDown {
-    from {
-      transform: translateY(-10%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
 }
+
 
 .hero {
   display: flex;
