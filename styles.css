@@ -274,3 +274,20 @@ footer {
     margin-bottom: 10px;
   }
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stats {
+  text-align: center;
+  padding: 100px 30px;
+  background: rgba(0, 0, 0, 0.2);
+}
