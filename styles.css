@@ -2,9 +2,9 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
-  background: linear-gradient(270deg, #1d4ed8, #3b82f6, #10b981);
+  background: linear-gradient(270deg, #000, #10b981, #000);
   background-size: 600% 600%;
-  animation: gradientBG 20s ease infinite;
+  animation: gradientBG 9s ease infinite;
 }
 
 /* Animación reveal */
@@ -131,7 +131,7 @@ footer {
 }
 
 .blog article {
-  background: rgba(255, 255, 255, 0.1);
+  background: #000;
   margin: 30px auto;
   max-width: 800px;
   padding: 30px;
